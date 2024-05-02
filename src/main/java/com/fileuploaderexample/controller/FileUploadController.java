@@ -14,7 +14,7 @@ public class FileUploadController {
 
     private final FileUploadService fileUploadService;
 
-    @PostMapping("/upload-image")
+    @PostMapping("/upload")
     public String fileUpload(@RequestPart MultipartFile file, String serviceName) throws IOException {
         return fileUploadService.fileUpload(file, serviceName);
     }
